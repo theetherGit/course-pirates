@@ -2,7 +2,7 @@
 	import { Menu } from 'lucide-svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as Sheet from '$lib/components/ui/sheet';
-	import {brandConfig, navItems} from './utils';
+	import { brandConfig, navItems } from './utils';
 	import { slide } from 'svelte/transition';
 	import { onNavigate } from '$app/navigation';
 
@@ -42,22 +42,22 @@
 						{mainNav.label}
 					</a>
 					{#if mainNav.conditionForSubNav && (pageParams.includes(mainNav.conditionForSubNav) || currentPage.includes(mainNav.conditionForSubNav))}
-					<div class="ml-4 grid gap-1" transition:slide>
-						{#each mainNav.subRoutes as subNav}
-							<a
-								href={subNav.href}
-								class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground {currentPage.includes(
-									subNav.activeCondition
-								)
-									? 'bg-primary/70'
-									: 'hover:bg-secondary-foreground/10'}"
-							>
-								<svelte:component this={subNav.icon} class="h-5 w-5" />
-								{subNav.label}
-							</a>
-						{/each}
-					</div>
-				{/if}
+						<div class="ml-4 grid gap-1" transition:slide>
+							{#each mainNav.subRoutes as subNav}
+								<a
+									href={subNav.href}
+									class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground {currentPage.includes(
+										subNav.activeCondition
+									)
+										? 'bg-primary/70'
+										: 'hover:bg-secondary-foreground/10'}"
+								>
+									<svelte:component this={subNav.icon} class="h-5 w-5" />
+									{subNav.label}
+								</a>
+							{/each}
+						</div>
+					{/if}
 				{/if}
 			{/each}
 		</nav>

@@ -1,8 +1,8 @@
 <script lang="ts">
-    import "../../app.pcss"
-    import Navbar from "$lib/components/navbar/navbar.svelte"
+	import '../../app.pcss';
+	import Navbar from '$lib/components/navbar/navbar.svelte';
 </script>
 
 <Navbar>
-    <slot></slot>
+	<slot></slot>
 </Navbar>

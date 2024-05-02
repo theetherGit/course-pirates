@@ -34,14 +34,14 @@ type Links = NavigationDetails & {
 };
 
 type BrandConfig = {
-	name: string,
-	logo: string
-}
+	name: string;
+	logo: string;
+};
 
 export const brandConfig: BrandConfig = {
 	name: 'Course Pirates',
 	logo: '/logo.svg'
-}
+};
 
 export const subNavs: Record<string, Array<NavigationDetails>> = {
 	admin: [

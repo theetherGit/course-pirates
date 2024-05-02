@@ -2,7 +2,7 @@
 	import { mode, resetMode, setMode } from 'mode-watcher';
 	import MobileNavbar from './mobile-navbar.svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import {brandConfig} from "$lib/components/navbar/utils";
+	import { brandConfig } from '$lib/components/navbar/utils';
 	export let currentPage: Array<string> = [];
 	export let pageParams: Array<string> = [];
 </script>
@@ -13,7 +13,7 @@
 			<div class="mr-auto flex">
 				<MobileNavbar {currentPage} {pageParams} />
 				<div class="ml-2 flex flex-shrink-0 items-center space-x-2">
-					<img class="block h-7 w-7" src="{brandConfig.logo}" alt={brandConfig.name} />
+					<img class="block h-7 w-7" src={brandConfig.logo} alt={brandConfig.name} />
 					<h2 class="hidden text-xl font-bold md:block">{brandConfig.name}</h2>
 				</div>
 			</div>
